@@ -3,7 +3,7 @@ var MAINAPP = (function (app) {
         var xobj = new XMLHttpRequest();
         xobj.overrideMimeType('application/json');
         xobj.open('GET', path);
-        xobj.onreadystatechange = async function () {
+        xobj.onreadystatechange = function () {
             if (xobj.readyState === 4) {
                 populateDOM(JSON.parse(xobj.responseText));
             }
